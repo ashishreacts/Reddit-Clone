@@ -1,0 +1,79 @@
+.main-nav {
+  background-color: whitesmoke;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+}
+
+img {
+  height: 75px;
+  justify-content: left;
+}
+
+.search-bar {
+  margin: 25px;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  /*width of the page decreases below 200px component doesn't decrese in size*/
+}
+
+.input-wrapper {
+  background-color: white;
+  width: 100%;
+  border-radius: 20px;
+  height: 1.8rem;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  margin-left: 250px;
+}
+
+.input-wrapper:hover {
+  border: 1px solid blue;
+}
+input {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  font-size: 1.2rem;
+  width: 100%;
+  margin-left: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+#search-icon {
+  color: gray;
+}
+
+.btn.btn-primary {
+  width: 100px;
+  height: 35px;
+  margin: 19px;
+  margin-left: 30px;
+  border-radius: 20px;
+  border: none;
+  background-color: orangered;
+}
+.btn:hover {
+  background-color: rgb(252, 89, 29);
+}
+.btn.btn-light {
+  width: 130px;
+  height: 35px;
+  margin: 19px;
+  margin-left: 420px;
+  border-radius: 20px;
+  border: none;
+}
+.btn:hover {
+  background-color: rgba(220, 220, 220, 0.742);
+}
+
+.get {
+  margin: 10px;
+  font-style: normal;
+}

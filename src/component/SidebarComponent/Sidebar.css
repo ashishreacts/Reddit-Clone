@@ -1,0 +1,38 @@
+.main {
+  display: flex;
+  height: 100vh;
+}
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background-color: whitesmoke;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar-titled {
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+  padding: 0px 7px;
+  display: block;
+  margin: 5px;
+}
+.sidebar-titled:hover {
+  background-color: rgba(231, 223, 223, 0.4);
+}
+.sidebar-titled div i {
+  display: inline-block;
+  width: 24px;
+}
+
+.topics {
+  margin: 5px;
+  color: gray;
+  font-size: 14px;
+}
+.feeds {
+  margin: 5px;
+  color: gray;
+  font-size: 14px;
+}

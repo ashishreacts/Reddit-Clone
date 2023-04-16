@@ -1,0 +1,364 @@
+[
+  {
+    "title": "Gaming",
+    "icon": "bi-controller",
+    "childrens": [
+      {
+        "title": "Valheim",
+        "path": "/Valheim"
+      },
+      {
+        "title": "Genshin Impact",
+        "path": "/Genshin Impact"
+      },
+      {
+        "title": "Minecraft",
+        "path": "/Minecraft"
+      },
+      {
+        "title": "Pokimane",
+        "path": "/Pokimane"
+      },
+      {
+        "title": "Halo Infinite",
+        "path": "/Halo Infinite"
+      },
+      {
+        "title": "Call of Duty: Warzone",
+        "path": "/Call of Duty: Warzone"
+      },
+      {
+        "title": "Path of Exile",
+        "path": "/Path of Exile"
+      },
+      {
+        "title": "Hollow Knight: Silksong",
+        "path": "/Hollow Knight: Silksong"
+      },
+      {
+        "title": "Escape from Tarkov",
+        "path": "/Escape from Tarkov"
+      },
+      {
+        "title": "Watch Dogs: Legion",
+        "path": "/Watch Dogs: Legion"
+      }
+    ]
+  },
+  {
+    "title": "Sports",
+    "icon": "bi-playstation",
+    "childrens": [
+      {
+        "title": "NFL",
+        "path": "/NFL"
+      },
+      {
+        "title": "NBA",
+        "path": "/NBA"
+      },
+      {
+        "title": "Megan Anderson",
+        "path": "/Megan Anderson"
+      },
+      {
+        "title": "Atlanta Hawks",
+        "path": "/Atlanta Hawks"
+      },
+      {
+        "title": "Los Angeles Lakers",
+        "path": "/Los Angeles Lakers"
+      },
+      {
+        "title": "Boston Celtics",
+        "path": "/Boston Celtics"
+      },
+      {
+        "title": "Arsenal F.C.",
+        "path": "/Arsenal F.C."
+      },
+      {
+        "title": "Philadelphia 76ers",
+        "path": "/Philadelphia 76ers"
+      },
+      {
+        "title": "Premier League",
+        "path": "/Premier League"
+      },
+      {
+        "title": "UFC",
+        "path": "/UFC"
+      }
+    ]
+  },
+  {
+    "title": "Buisness Economics and Finance",
+    "icon": "bi-graph-up-arrow",
+    "childrens": [
+      {
+        "title": "GameStop",
+        "path": "/gameStop"
+      },
+      {
+        "title": "Moderna",
+        "path": "/Moderna"
+      },
+      {
+        "title": "Pfizer",
+        "path": "/Pfizer"
+      },
+      {
+        "title": "Johnson & Johnson",
+        "path": "/Johnson & Johnson"
+      },
+      {
+        "title": "AstraZeneca",
+        "path": "/AstraZeneca"
+      },
+      {
+        "title": "Walgreens",
+        "path": "/Walgreens"
+      },
+      {
+        "title": "Best Buy",
+        "path": "/Best Buy"
+      },
+      {
+        "title": "Novavax",
+        "path": "/Novavax"
+      },
+      {
+        "title": "SpaceX",
+        "path": "/SpaceX"
+      },
+      {
+        "title": "Tesla",
+        "path": "/Tesla"
+      }
+    ]
+  },
+  {
+    "title": "Crypto",
+    "icon": "bi-currency-bitcoin",
+    "childrens": [
+      {
+        "title": "Cardano",
+        "path": "/Cardano"
+      },
+      {
+        "title": "Dogecoin",
+        "path": "/Dogecoin"
+      },
+      {
+        "title": "Dogecoin",
+        "path": "/Dogecoin"
+      },
+      {
+        "title": "Algorand",
+        "path": "/Algorand"
+      },
+      {
+        "title": "Bitcoin",
+        "path": "/Bitcoin"
+      },
+      {
+        "title": "Litecoin",
+        "path": "/Litecoin"
+      },
+      {
+        "title": "Basic Attention Token",
+        "path": "/Basic Attention Token"
+      },
+      {
+        "title": "Bitcoin Cash",
+        "path": "/Bitcoin Cash"
+      }
+    ]
+  },
+  {
+    "title": "Television",
+    "icon": "bi-tv",
+    "childrens": [
+      {
+        "title": "The Real Housewives of Atlanta",
+        "path": "/The Real Housewives of Atlanta"
+      },
+      {
+        "title": "The Bachelor",
+        "path": "/The Bachelor"
+      },
+      {
+        "title": "Sister Wives",
+        "path": "/Sister Wives"
+      },
+      {
+        "title": "90 Day Fiance",
+        "path": "/90 Day Fiance"
+      },
+      {
+        "title": "Wife Swap",
+        "path": "/Wife Swap"
+      },
+      {
+        "title": "The Amazing Race Australia",
+        "path": "/The Amazing Race Australia"
+      },
+      {
+        "title": "Married at First Sight",
+        "path": "/Married at First Sight"
+      },
+      {
+        "title": "The Real Housewives of Dallas",
+        "path": "/The Real Housewives of Dallas"
+      },
+      {
+        "title": "My 600-lb Life",
+        "path": "/My 600-lb Life"
+      },
+      {
+        "title": "Last Week Tonight with John Oliver",
+        "path": "/Last Week Tonight with John Oliver"
+      }
+    ]
+  },
+  {
+    "title": "Celebrity",
+    "icon": "bi-star",
+    "childrens": [
+      {
+        "title": "Kim Kardashian",
+        "path": "/Kim Kardashian"
+      },
+      {
+        "title": "Doja Cat",
+        "path": "/Doja Cat"
+      },
+      {
+        "title": "Iggy Azalea",
+        "path": "/Iggy Azalea"
+      },
+      {
+        "title": "Anya Taylor-Joy",
+        "path": "/Anya Taylor-Joy"
+      },
+      {
+        "title": "Jamie Lee Curtis",
+        "path": "/Jamie Lee Curtis"
+      },
+      {
+        "title": "Millie Bobby Brown",
+        "path": "/Millie Bobby Brown"
+      },
+      {
+        "title": "Tom Hiddleston",
+        "path": "/Tom Hiddleston"
+      },
+      {
+        "title": "Keanu Reeves",
+        "path": "/Keanu Reeves"
+      }
+    ]
+  },
+  {
+    "title": "More Topics",
+    "icon": "bi-three-dots",
+    "childrens": [
+      {
+        "title": "Animals and Pets",
+        "path": "/Animals and Pets"
+      },
+      {
+        "title": "Anime",
+        "path": "/Anime"
+      },
+      {
+        "title": "Art",
+        "path": "/Art"
+      },
+      {
+        "title": "Cars and Motor Vehicles",
+        "path": "/Cars and Motor Vehicles"
+      },
+      {
+        "title": "Crafts and DIY",
+        "path": "/Crafts and DIY"
+      },
+      {
+        "title": "Culture, Race, and Ethnicity",
+        "path": "/Culture, Race, and Ethnicity"
+      },
+      {
+        "title": "Ethics and Philosophy",
+        "path": "/Ethics and Philosophy"
+      },
+      {
+        "title": "Fashion",
+        "path": "/Fashion"
+      },
+      {
+        "title": "Food and Drink",
+        "path": "/Food and Drink"
+      },
+      {
+        "title": "History",
+        "path": "/History"
+      },
+      {
+        "title": "Hobbies",
+        "path": "/Hobbies"
+      },
+      {
+        "title": "Law",
+        "path": "/Law"
+      },
+      {
+        "title": "Learning and Education",
+        "path": "/Learning and Education"
+      },
+      {
+        "title": "Military",
+        "path": "/Military"
+      },
+      {
+        "title": "Movies",
+        "path": "/Movies"
+      },
+      {
+        "title": "Music",
+        "path": "/Music"
+      },
+      {
+        "title": "Place",
+        "path": "/Place"
+      },
+      {
+        "title": "Podcasts and Streamers",
+        "path": "/Podcasts and Streamers"
+      },
+      {
+        "title": "Politics",
+        "path": "/Politics"
+      },
+      {
+        "title": "Programming",
+        "path": "/Programming"
+      },
+      {
+        "title": "Reading, Writing, and Literature",
+        "path": "/Reading, Writing, and Literature"
+      },
+      {
+        "title": "Religion and Spirituality",
+        "path": "/Religion and Spirituality"
+      },
+      {
+        "title": "Tabletop Games",
+        "path": "/Tabletop Games"
+      },
+      {
+        "title": "Travel",
+        "path": "/Travel"
+      }
+    ]
+  }
+]
