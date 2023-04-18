@@ -7,6 +7,7 @@ const Navbar = ({ setResults }) => {
   const [input, setInput] = useState("");
   const [showModal, setShowModal] = useState(false);
   const closeModal = () => setShowModal(false);
+  const [user, setUser] = useState(null);
 
   const fetchData = (value) => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -58,16 +59,26 @@ const Navbar = ({ setResults }) => {
             <span className="get">Get App</span>{" "}
           </i>
         </button>
-        <button
-          type="buttton"
-          class="btn btn-primary"
-          onClick={() => setShowModal(true)}
-        >
-          Log In
-        </button>
+
+        {user == null ? (
+          <button
+            type="buttton"
+            class="btn btn-primary"
+            onClick={() => setShowModal(true)}
+          >
+            Log In
+          </button>
+        ) : (
+          <div id="userInfo">
+            <div id="username">{user}</div>
+            <button type="buttton" class="logout" onClick={() => setUser(null)}>
+              Log Out
+            </button>
+          </div>
+        )}
 
         {/* MODAL */}
-        {showModal && <MyModal closeModal={closeModal} />}
+        {showModal && <MyModal setUser={setUser} closeModal={closeModal} />}
       </nav>
     </>
   );

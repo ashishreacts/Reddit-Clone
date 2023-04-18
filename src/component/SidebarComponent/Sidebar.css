@@ -1,11 +1,11 @@
 .main {
   display: flex;
-  height: 100vh;
+  height: 223vh;
 }
 .sidebar {
   width: 250px;
   flex-shrink: 0;
-  background-color: whitesmoke;
+  background-color: gainsboro;
   height: 100%;
   overflow: auto;
 }

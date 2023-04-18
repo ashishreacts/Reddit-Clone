@@ -3,6 +3,7 @@
   display: block;
   transition: background-color 0.15s;
   border-radius: 5px;
+  margin: 5px;
 }
 .sidebar-item:hover {
   background-color: rgba(231, 223, 223, 0.927);

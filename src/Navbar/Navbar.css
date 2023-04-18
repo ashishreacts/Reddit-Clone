@@ -1,5 +1,5 @@
 .main-nav {
-  background-color: whitesmoke;
+  background-color: gainsboro;
   height: 10vh;
   width: 100vw;
   display: flex;
@@ -16,6 +16,7 @@ img {
   justify-content: center;
   min-width: 200px;
   /*width of the page decreases below 200px component doesn't decrese in size*/
+  background-color: gainsboro;
 }
 
 .input-wrapper {
@@ -26,7 +27,7 @@ img {
   padding: 0 15px;
   display: flex;
   align-items: center;
-  margin-left: 250px;
+  margin-left: 200px;
 }
 
 .input-wrapper:hover {
@@ -39,6 +40,8 @@ input {
   font-size: 1.2rem;
   width: 100%;
   margin-left: 5px;
+
+  border-radius: 20px;
 }
 
 input:focus {
@@ -65,7 +68,7 @@ input:focus {
   width: 130px;
   height: 35px;
   margin: 19px;
-  margin-left: 420px;
+  margin-left: 330px;
   border-radius: 20px;
   border: none;
 }
@@ -76,4 +79,28 @@ input:focus {
 .get {
   margin: 10px;
   font-style: normal;
+}
+
+#userInfo {
+  width: 200px;
+  height: 50px;
+  margin: 19px;
+  margin-left: 30px;
+  display: flex;
+}
+#username {
+  width: 50%;
+  height: 20px;
+  margin: 10px;
+}
+.logout {
+  width: 50%;
+  height: 35px;
+  margin: 7px;
+  border-radius: 20px;
+  border: none;
+  background-color: orangered;
+}
+.logout:hover {
+  background-color: rgb(252, 157, 123);
 }

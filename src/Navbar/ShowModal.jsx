@@ -1,6 +1,19 @@
+import { useRef } from "react";
 import "./ShowModal.css";
 import { cleanup } from "@testing-library/react";
-const MyModal = ({ closeModal }) => {
+const MyModal = ({ closeModal, setUser }) => {
+  const username = useRef();
+  const password = useRef();
+  function handleLogin() {
+    if (
+      username.current.value === "ashish" &&
+      password.current.value === "123"
+    ) {
+      setUser("Ashish");
+    }
+
+    closeModal();
+  }
   return (
     <>
       <div className="modal-wrapper" onClick={closeModal}></div>
@@ -11,11 +24,21 @@ const MyModal = ({ closeModal }) => {
           our <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>{" "}
           Privacy Policy.
         </p>
-        <input className="modal-text" type="text" placeholder="Username" />
+        <input
+          ref={username}
+          className="modal-text"
+          type="text"
+          placeholder="Username"
+        />
         <br />
-        <input className="modal-text" type="password" placeholder="Password" />
+        <input
+          ref={password}
+          className="modal-text"
+          type="password"
+          placeholder="Password"
+        />
         <br />
-        <button type="buttton" class="modal-btn" onClick={closeModal}>
+        <button type="buttton" class="modal-btn" onClick={handleLogin}>
           Log In
         </button>
       </div>

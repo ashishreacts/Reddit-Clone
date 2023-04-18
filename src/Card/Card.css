@@ -5,12 +5,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 200px;
+  margin-left: 300px;
   height: auto;
 }
-.card-body {
-  margin-left: 30px;
+.card-main {
+  width: 100vw;
+  background-color: white;
 }
+.card-matter {
+  margin-left: 30px;
+  margin-right: 20px;
+}
+.icons {
+  float: left;
+  font-size: 30px;
+}
+.icons:hover {
+  color: blue;
+  cursor: pointer;
+}
+
 .card-title {
   margin-left: 20px;
 }
@@ -32,7 +46,7 @@
   border-radius: 8px;
   margin: 5px;
 
-  margin-left: 200px;
+  margin-left: 300px;
 }
 .card-popular-post-body {
   margin: 10px;
@@ -51,11 +65,12 @@ li {
   margin: 5px;
   width: 100px;
   height: 50px;
+  background-color: rgb(245, 238, 238);
 }
 i {
   font-style: normal;
 }
 .post-title {
   margin: 10px;
-  margin-left: 200px;
+  margin-left: 300px;
 }
