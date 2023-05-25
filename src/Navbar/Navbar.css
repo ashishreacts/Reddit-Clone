@@ -104,3 +104,7 @@ input:focus {
 .logout:hover {
   background-color: rgb(252, 157, 123);
 }
+
+.search-icon {
+  font-size: 20px;
+}

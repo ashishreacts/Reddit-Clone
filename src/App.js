@@ -1,16 +1,13 @@
-import React, { useState } from "react";
-// import "../styles/App.css";
+import React from "react";
+
 import Navbar from "./Navbar/Navbar";
 import Sidebar from "./component/SidebarComponent/Sidebar";
 
 const App = () => {
-  const [results, setResults] = useState([]);
   return (
-    // <div id="main">
-    // </div>
     <>
       <div>
-        <Navbar setResults={setResults} />
+        <Navbar />
       </div>
       <Sidebar />
     </>
