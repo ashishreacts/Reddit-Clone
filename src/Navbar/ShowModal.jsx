@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import "./ShowModal.css";
-import { cleanup } from "@testing-library/react";
+// import { cleanup } from "@testing-library/react";
 const MyModal = ({ closeModal, setUser }) => {
   const username = useRef();
   const password = useRef();
