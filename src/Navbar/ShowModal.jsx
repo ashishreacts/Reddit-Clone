@@ -21,8 +21,8 @@ const MyModal = ({ closeModal, setUser }) => {
         <h2 className="modal-h2">Log In</h2>
         <p className="modal-p">
           By continuing, you agree are setting up a Reddit account and agree to
-          our <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>{" "}
-          Privacy Policy.
+          our <a href="https://example.com">User Agreement</a> and{" "}
+          <a href="https://example.com">Privacy Policy</a> Privacy Policy.
         </p>
         <input
           ref={username}
