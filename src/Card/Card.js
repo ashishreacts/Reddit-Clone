@@ -27,7 +27,7 @@ export const Card = () => {
                     India
                     <ul className="dropdown-menu">
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="https://example.com">
                           Everywhere
                         </a>
                       </li>
