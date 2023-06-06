@@ -273,7 +273,8 @@ export const Card = () => {
             </div>
             <div className="card-matter">
               <h3 className="card-title">
-                Fifty for Rinku Singh! <a href="#">#IPL2023 #KKRvSRH</a>
+                Fifty for Rinku Singh!{" "}
+                <a href="https://example.com">#IPL2023 #KKRvSRH</a>
               </h3>
               <img
                 className="card-img"
@@ -293,8 +294,9 @@ export const Card = () => {
             </div>
             <div className="card-matter">
               <h3 className="card-title">
-                शराब घोटाले के असली रचनाकार <a href="#">#ArvindKejriwal</a> का
-                तिहाड़ जेल में बंद शराब घोटाले के आरोपियों ने नाम लिया है।
+                शराब घोटाले के असली रचनाकार{" "}
+                <a href="https://example.com">#ArvindKejriwal</a> का तिहाड़ जेल
+                में बंद शराब घोटाले के आरोपियों ने नाम लिया है।
               </h3>
               <img
                 className="card-img"
