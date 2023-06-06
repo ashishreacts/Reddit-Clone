@@ -30,7 +30,7 @@ const Navbar = ({ setResults }) => {
             </div>
           </span>
         </div>
-        <button type="button" class="btn btn-light">
+        <button type="button" className="btn btn-light">
           <i className="bi-qr-code-scan">
             <span className="get">Get App</span>{" "}
           </i>
@@ -39,7 +39,7 @@ const Navbar = ({ setResults }) => {
         {user == null ? (
           <button
             type="buttton"
-            class="btn btn-primary"
+            className="btn btn-primary"
             onClick={() => setShowModal(true)}
           >
             Log In
@@ -47,7 +47,11 @@ const Navbar = ({ setResults }) => {
         ) : (
           <div id="userInfo">
             <div id="username">{user}</div>
-            <button type="buttton" class="logout" onClick={() => setUser(null)}>
+            <button
+              type="buttton"
+              className="logout"
+              onClick={() => setUser(null)}
+            >
               Log Out
             </button>
           </div>
