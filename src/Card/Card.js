@@ -10,198 +10,198 @@ export const Card = () => {
           <div className="card-popular-post-body">
             <ul>
               <li>
-                <button type="button" class="card-btn">
+                <button type="button" className="card-btn">
                   <i className="bi-fire">
                     <span>Hot</span>
                   </i>
                 </button>
               </li>
               <li>
-                <div class="dropdown">
+                <div className="dropdown">
                   <button
-                    class="card-btn dropdown-toggle"
+                    className="card-btn dropdown-toggle"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     India
-                    <ul class="dropdown-menu">
+                    <ul className="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Everywhere
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           United States
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Argentina
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Australia
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Bulgaria
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Canada
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Chile
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Colombia
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Croatia
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Finland
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           France
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Germany
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Greece
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Hungary
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Iceland
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           India
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Ireland
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Italy
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Japan
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Malaysia
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Mexico
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           New Zealand
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Poland
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Portugal
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Romania
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Serbia
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Singapore
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Spain
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Sweden
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Taiwan
                         </a>
                       </li>
@@ -211,14 +211,14 @@ export const Card = () => {
                 </div>
               </li>
               <li>
-                <button type="button" class="card-btn">
+                <button type="button" className="card-btn">
                   <i className="bi-plus-circle-dotted">
                     <span>New</span>
                   </i>
                 </button>
               </li>
               <li>
-                <button type="button" class="card-btn">
+                <button type="button" className="card-btn">
                   <i className="bi-bar-chart">
                     <span>Top</span>
                   </i>
