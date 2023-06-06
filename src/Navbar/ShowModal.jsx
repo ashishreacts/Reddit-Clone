@@ -38,7 +38,7 @@ const MyModal = ({ closeModal, setUser }) => {
           placeholder="Password"
         />
         <br />
-        <button type="buttton" class="modal-btn" onClick={handleLogin}>
+        <button type="buttton" className="modal-btn" onClick={handleLogin}>
           Log In
         </button>
       </div>
