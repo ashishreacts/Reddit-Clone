@@ -7,6 +7,7 @@
   align-items: center;
   margin-left: 300px;
   height: auto;
+  padding-top: 15px;
 }
 .card-main {
   width: 100vw;
@@ -31,9 +32,9 @@
 .card-img {
   display: flex;
   justify-content: center;
-  margin-left: 70px;
+
   width: 70%;
-  height: 350px;
+  height: 250px;
 }
 .card-text {
   text-align: justify;
@@ -45,13 +46,13 @@
   border: 1px solid rgb(212, 209, 209);
   border-radius: 8px;
   margin: 5px;
-
   margin-left: 300px;
 }
 .card-popular-post-body {
   margin: 10px;
   margin-right: 10px;
 }
+
 ul {
   padding-left: 0;
 }
@@ -59,13 +60,17 @@ li {
   display: inline-flex;
   list-style-type: none;
 }
-.card-btn {
+.card-btn,
+.card-btn-post {
   border: none;
   border-radius: 30px;
   margin: 5px;
   width: 100px;
   height: 50px;
   background-color: rgb(245, 238, 238);
+}
+.card-btn-post:hover {
+  background-color: antiquewhite;
 }
 i {
   font-style: normal;

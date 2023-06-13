@@ -20,7 +20,7 @@ export const Card = () => {
         " https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=eb72608b2f62483d83980969c871b0b3"
       )
       .then((response) => {
-        setNewNews(response.data.articles);
+        setData(response.data.articles);
       });
   };
   const getTopNews = () => {
@@ -29,7 +29,7 @@ export const Card = () => {
         " https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=eb72608b2f62483d83980969c871b0b3"
       )
       .then((response) => {
-        setTopNews(response.data.articles);
+        setData(response.data.articles);
       });
   };
   return (
@@ -41,7 +41,11 @@ export const Card = () => {
           <div className="card-popular-post-body">
             <ul>
               <li>
-                <button type="button" className="card-btn" onClick={getHotNews}>
+                <button
+                  type="button"
+                  className="card-btn-post"
+                  onClick={getHotNews}
+                >
                   <i className="bi-fire">
                     <span>Hot</span>
                   </i>
@@ -50,7 +54,7 @@ export const Card = () => {
               <li>
                 <div className="dropdown">
                   <button
-                    className="card-btn dropdown-toggle"
+                    className="card-btn-post dropdown-toggle"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -242,14 +246,22 @@ export const Card = () => {
                 </div>
               </li>
               <li>
-                <button type="button" className="card-btn" onClick={getNewNews}>
+                <button
+                  type="button"
+                  className="card-btn-post"
+                  onClick={getNewNews}
+                >
                   <i className="bi-plus-circle-dotted">
                     <span>New</span>
                   </i>
                 </button>
               </li>
               <li>
-                <button type="button" className="card-btn" onClick={getTopNews}>
+                <button
+                  type="button"
+                  className="card-btn-post"
+                  onClick={getTopNews}
+                >
                   <i className="bi-bar-chart">
                     <span>Top</span>
                   </i>
@@ -263,7 +275,7 @@ export const Card = () => {
         {data.map((value) => {
           return (
             <div className="card">
-              <img src={value.urlToImage} className="card-img-top" alt="..." />
+              <img src={value.urlToImage} className="card-img" alt="..." />
               <div className="card-body">
                 <h4 className="card-title">{value.title}</h4>
                 <p className="card-text">{value.description}</p>
@@ -271,7 +283,7 @@ export const Card = () => {
             </div>
           );
         })}
-        {newNews.map((value) => {
+        {/* {newNews.map((value) => {
           return (
             <div className="card">
               <img src={value.urlToImage} className="card-img-top" alt="..." />
@@ -292,7 +304,7 @@ export const Card = () => {
               </div>
             </div>
           );
-        })}
+        })} */}
       </div>
     </>
   );
