@@ -283,28 +283,6 @@ export const Card = () => {
             </div>
           );
         })}
-        {/* {newNews.map((value) => {
-          return (
-            <div className="card">
-              <img src={value.urlToImage} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h4 className="card-title">{value.title}</h4>
-                <p className="card-text">{value.description}</p>
-              </div>
-            </div>
-          );
-        })}
-        {topNews.map((value) => {
-          return (
-            <div className="card">
-              <img src={value.urlToImage} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h4 className="card-title">{value.title}</h4>
-                <p className="card-text">{value.description}</p>
-              </div>
-            </div>
-          );
-        })} */}
       </div>
     </>
   );
