@@ -87,3 +87,27 @@ i {
   margin: 10px;
   margin-left: 300px;
 }
+
+@media (max-width: 768px) {
+  .card-main {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-img-top {
+    height: 150px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}

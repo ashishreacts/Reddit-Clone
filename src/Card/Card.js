@@ -41,198 +41,198 @@ export const Card = () => {
           <div className="card-popular-post-body">
             <ul>
               <li>
-                <button type="button" class="card-btn" onClick={getHotNews}>
+                <button type="button" className="card-btn" onClick={getHotNews}>
                   <i className="bi-fire">
                     <span>Hot</span>
                   </i>
                 </button>
               </li>
               <li>
-                <div class="dropdown">
+                <div className="dropdown">
                   <button
-                    class="card-btn dropdown-toggle"
+                    className="card-btn dropdown-toggle"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     India
-                    <ul class="dropdown-menu">
+                    <ul className="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Everywhere
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           United States
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Argentina
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Australia
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Bulgaria
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Canada
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Chile
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Colombia
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Croatia
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Finland
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           France
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Germany
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Greece
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Hungary
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Iceland
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           India
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Ireland
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Italy
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Japan
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Malaysia
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Mexico
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           New Zealand
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Poland
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Portugal
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Romania
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Serbia
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Singapore
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Spain
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Sweden
                         </a>
                       </li>
                       <br />
                       <li>
-                        <a class="dropdown-item" href="https://example.com">
+                        <a className="dropdown-item" href="https://example.com">
                           Taiwan
                         </a>
                       </li>
@@ -242,14 +242,14 @@ export const Card = () => {
                 </div>
               </li>
               <li>
-                <button type="button" class="card-btn" onClick={getNewNews}>
+                <button type="button" className="card-btn" onClick={getNewNews}>
                   <i className="bi-plus-circle-dotted">
                     <span>New</span>
                   </i>
                 </button>
               </li>
               <li>
-                <button type="button" class="card-btn" onClick={getTopNews}>
+                <button type="button" className="card-btn" onClick={getTopNews}>
                   <i className="bi-bar-chart">
                     <span>Top</span>
                   </i>
