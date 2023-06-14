@@ -8,7 +8,6 @@ export const Card = () => {
   const getHotNews = () => {
     axios
       .get(
-        // " https://newsapi.org/v2/top-headlines?country=us&apiKey=eb72608b2f62483d83980969c871b0b3"
         "https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
       )
       .then((response) => {
@@ -18,7 +17,6 @@ export const Card = () => {
   const getNewNews = () => {
     axios
       .get(
-        // " https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=eb72608b2f62483d83980969c871b0b3"
         "https://gnews.io/api/v4/search?q=example&lang=en&country=in&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
       )
       .then((response) => {
@@ -28,7 +26,6 @@ export const Card = () => {
   const getTopNews = () => {
     axios
       .get(
-        // " https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=eb72608b2f62483d83980969c871b0b3"
         "https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=in&apikey=80ad10984b50944aaf52a052eb31ae04"
       )
       .then((response) => {
