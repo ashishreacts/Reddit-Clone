@@ -8,7 +8,8 @@ export const Card = () => {
   const getHotNews = () => {
     axios
       .get(
-        " https://newsapi.org/v2/top-headlines?country=us&apiKey=eb72608b2f62483d83980969c871b0b3"
+        // " https://newsapi.org/v2/top-headlines?country=us&apiKey=eb72608b2f62483d83980969c871b0b3"
+        "https://gnews.io/api/v4/search?q=example&lang=en&country=in&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
       )
       .then((response) => {
         setData(response.data.articles);
@@ -17,7 +18,8 @@ export const Card = () => {
   const getNewNews = () => {
     axios
       .get(
-        " https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=eb72608b2f62483d83980969c871b0b3"
+        // " https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=eb72608b2f62483d83980969c871b0b3"
+        "https://gnews.io/api/v4/search?q=example&lang=en&country=in&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
       )
       .then((response) => {
         setData(response.data.articles);
@@ -26,7 +28,8 @@ export const Card = () => {
   const getTopNews = () => {
     axios
       .get(
-        " https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=eb72608b2f62483d83980969c871b0b3"
+        // " https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=eb72608b2f62483d83980969c871b0b3"
+        "https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=in&apikey=80ad10984b50944aaf52a052eb31ae04"
       )
       .then((response) => {
         setData(response.data.articles);
@@ -275,10 +278,13 @@ export const Card = () => {
         {data.map((value) => {
           return (
             <div className="card">
-              <img src={value.urlToImage} className="card-img" alt="..." />
+              <img src={value.image} className="card-img" alt="..." />
               <div className="card-body">
                 <h4 className="card-title">{value.title}</h4>
                 <p className="card-text">{value.description}</p>
+                <a href={value.url} className="card-btn" target="_blank">
+                  See News
+                </a>
               </div>
             </div>
           );
