@@ -3,13 +3,13 @@ import "./Card.css";
 import axios from "axios";
 export const Card = () => {
   const [data, setData] = useState([]);
-  const [newNews, setNewNews] = useState([]);
-  const [topNews, setTopNews] = useState([]);
+  // const [newNews, setNewNews] = useState([]);
+  // const [topNews, setTopNews] = useState([]);
   const getHotNews = () => {
     axios
       .get(
         // " https://newsapi.org/v2/top-headlines?country=us&apiKey=eb72608b2f62483d83980969c871b0b3"
-        "https://gnews.io/api/v4/search?q=example&lang=en&country=in&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
+        "https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
       )
       .then((response) => {
         setData(response.data.articles);
