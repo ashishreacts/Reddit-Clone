@@ -282,7 +282,11 @@ export const Card = () => {
               <div className="card-body">
                 <h4 className="card-title">{value.title}</h4>
                 <p className="card-text">{value.description}</p>
-                <a href={value.url} className="card-btn" target="_blank">
+                <a
+                  href={value.url}
+                  className="card-btn"
+                  rel="noopener noreferrer"
+                >
                   See News
                 </a>
               </div>
