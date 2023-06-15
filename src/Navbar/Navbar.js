@@ -23,7 +23,7 @@ const Navbar = ({ setResults }) => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand">
               <img
                 src="https://logos-world.net/wp-content/uploads/2020/10/Reddit-Logo.png"
                 alt="reddit"
