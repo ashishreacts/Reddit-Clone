@@ -5,7 +5,7 @@
 .sidebar {
   width: 250px;
   flex-shrink: 0;
-  background-color: gainsboro;
+  background-color: rgba(240, 237, 237, 0.984);
   height: 100%;
   overflow: auto;
 }

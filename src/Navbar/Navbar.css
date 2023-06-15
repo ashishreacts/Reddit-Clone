@@ -1,148 +1,106 @@
-.main-nav {
-  background-color: gainsboro;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  height: 10vh;
+.navbar {
+  background-color: #f8f9fa;
 }
 
-img {
-  height: 75px;
+.navbar-brand img {
+  height: 60px;
   width: auto;
 }
 
-.search-bar {
-  margin: 25px;
-  align-items: center;
-  justify-content: center;
-  min-width: 200px;
-  /*width of the page decreases below 200px component doesn't decrese in size*/
-  background-color: gainsboro;
-}
-
-.input-wrapper {
-  background-color: white;
-  width: 100%;
+.form-control {
+  width: 450px;
+  margin: 0px 300px;
   border-radius: 20px;
-  height: 1.8rem;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-  margin-left: 200px;
 }
 
-.input-wrapper:hover {
-  border: 1px solid blue;
-}
-input {
-  background-color: transparent;
+.btn-outline-success {
+  margin: 0px 50px;
   border: none;
-  height: 100%;
-  font-size: 1.2rem;
-  width: 100%;
-  margin-left: 5px;
-
   border-radius: 20px;
-}
-
-input:focus {
-  outline: none;
-}
-
-#search-icon {
-  color: gray;
-}
-
-.btn {
-  margin-left: 10px;
-}
-
-.btn-primary {
-  width: 100px;
-  height: 35px;
-  margin: 19px;
-  margin-right: 150px;
-  border-radius: 20px;
-  border: none;
-  background-color: orangered;
-}
-.btn:hover {
-  background-color: rgb(252, 89, 29);
-}
-.btn-light {
-  width: 150px;
-  height: 35px;
-  margin: 19px;
-  margin-left: 250px;
-  border-radius: 20px;
-  border: none;
-}
-.btn:hover {
-  background-color: rgba(220, 220, 220, 0.742);
-}
-
-.get {
-  margin: 10px;
-  font-style: normal;
 }
 
 #userInfo {
-  width: 200px;
-  height: 50px;
-  margin: 19px;
-  margin-left: 30px;
   display: flex;
+  align-items: center;
 }
+
 #username {
-  width: 50%;
-  height: 20px;
-  margin: 10px;
+  margin-right: 10px;
 }
+
 .logout {
-  width: 50%;
-  height: 35px;
-  margin: 7px;
-  border-radius: 20px;
-  border: none;
   background-color: orangered;
+  border: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+  margin-right: 250px;
 }
+
 .logout:hover {
-  background-color: rgb(252, 157, 123);
+  text-decoration: underline;
+  background-color: rgb(241, 133, 94);
 }
 
-.search-icon {
-  font-size: 20px;
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
 }
 
-@media (max-width: 768px) {
-  .logo img {
-    height: 30px;
-  }
-
-  input[type="text"] {
-    width: 150px;
-  }
-
-  .btn {
-    margin-left: 5px;
-  }
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 101;
 }
 
-@media (max-width: 576px) {
-  .logo img {
-    height: 25px;
-  }
+.modal-h2 {
+  margin: 0 0 10px;
+}
 
-  input[type="text"] {
-    width: 120px;
-    font-size: 12px;
-    padding: 3px 8px;
-  }
+.modal-p {
+  margin-bottom: 20px;
+}
 
-  .btn {
-    margin-left: 3px;
-    font-size: 12px;
-  }
+.modal-text {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal-btn {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  background-color: #0069d9;
+}
+
+.btn-primary {
+  background-color: orangered;
+  border: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+  margin-right: 300px;
 }

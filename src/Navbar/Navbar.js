@@ -9,56 +9,64 @@ const Navbar = ({ setResults }) => {
 
   return (
     <>
-      <nav className="main-nav">
-        <div className="logo">
-          <span>
-            <img
-              src="https://logos-world.net/wp-content/uploads/2020/10/Reddit-Logo.png"
-              alt="reddit"
-            />
-          </span>
-        </div>
-
-        <div className="search-bar">
-          <span>
-            <div className="input-wrapper">
-              <div className="search-icon">
-                <i className="bi-search"></i>
-                <br />
-              </div>
-              <input type="text" placeholder="Search Reddit" />
-            </div>
-          </span>
-        </div>
-        <button type="button" className="btn btn-light">
-          <i className="bi-qr-code-scan">
-            <span className="get">Get App</span>{" "}
-          </i>
-        </button>
-
-        {user == null ? (
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
           <button
-            type="buttton"
-            className="btn btn-primary"
-            onClick={() => setShowModal(true)}
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            Log In
+            <span className="navbar-toggler-icon"></span>
           </button>
-        ) : (
-          <div id="userInfo">
-            <div id="username">{user}</div>
-            <button
-              type="buttton"
-              className="logout"
-              onClick={() => setUser(null)}
-            >
-              Log Out
-            </button>
-          </div>
-        )}
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a className="navbar-brand" href="#">
+              <img
+                src="https://logos-world.net/wp-content/uploads/2020/10/Reddit-Logo.png"
+                alt="reddit"
+              />
+            </a>
 
-        {/* MODAL */}
-        {showModal && <MyModal setUser={setUser} closeModal={closeModal} />}
+            <form className="d-flex" role="search">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search Reddit"
+                aria-label="Search"
+              />
+              <button className="btn btn-outline-success" type="submit">
+                <i className="bi-qr-code-scan">
+                  <span className="get">Get App</span>{" "}
+                </i>
+              </button>
+            </form>
+            {/* MODAL */}
+            {user == null ? (
+              <button
+                type="buttton"
+                className="btn btn-primary"
+                onClick={() => setShowModal(true)}
+              >
+                Log In
+              </button>
+            ) : (
+              <div id="userInfo">
+                <div id="username">{user}</div>
+                <button
+                  type="buttton"
+                  className="logout"
+                  onClick={() => setUser(null)}
+                >
+                  Log Out
+                </button>
+              </div>
+            )}
+            {showModal && <MyModal setUser={setUser} closeModal={closeModal} />}
+          </div>
+        </div>
       </nav>
     </>
   );
