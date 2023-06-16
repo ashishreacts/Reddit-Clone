@@ -3,8 +3,24 @@ import "./Card.css";
 import axios from "axios";
 export const Card = () => {
   const [data, setData] = useState([]);
-  // const [newNews, setNewNews] = useState([]);
-  // const [topNews, setTopNews] = useState([]);
+  const [count, setCount] = useState(0);
+
+  const formatCount = (count) => {
+    return count.toLocaleString("en-US", {
+      minimumIntegerDigits: 2,
+      useGrouping: false,
+    });
+  };
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  };
   const getHotNews = () => {
     axios
       .get(
@@ -275,17 +291,32 @@ export const Card = () => {
         {data.map((value) => {
           return (
             <div className="card">
-              <img src={value.image} className="card-img" alt="..." />
               <div className="card-body">
-                <h4 className="card-title">{value.title}</h4>
-                <p className="card-text">{value.description}</p>
-                <a
-                  href={value.url}
-                  className="card-btn"
-                  rel="noopener noreferrer"
-                >
-                  See News
-                </a>
+                {/* icon */}
+                <span className="icons">
+                  <div className="upword">
+                    <i className="bi-arrow-up-circle" onClick={increment}></i>
+                  </div>
+
+                  <span>{formatCount(count)}</span>
+
+                  <div className="downword">
+                    <i className="bi-arrow-down-circle" onClick={decrement}></i>
+                  </div>
+                </span>
+                {/*  */}
+                <img src={value.image} className="card-img" alt="..." />
+                <div className="card-body">
+                  <h4 className="card-title">{value.title}</h4>
+                  <p className="card-text">{value.description}</p>
+                  <a
+                    href={value.url}
+                    className="card-btn"
+                    rel="noopener noreferrer"
+                  >
+                    See News
+                  </a>
+                </div>
               </div>
             </div>
           );

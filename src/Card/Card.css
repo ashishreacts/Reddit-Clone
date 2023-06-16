@@ -32,7 +32,7 @@
 .card-img {
   display: flex;
   justify-content: center;
-
+  margin: 0px 80px;
   width: 70%;
   height: 250px;
 }
@@ -80,26 +80,7 @@ i {
   margin-left: 300px;
 }
 
-@media (max-width: 768px) {
-  .card-main {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .card-img-top {
-    height: 150px;
-  }
-
-  .card-title {
-    font-size: 1rem;
-  }
-
-  .card-text {
-    font-size: 0.9rem;
-  }
+.icons {
+  float: left;
+  font-size: 30px;
 }
