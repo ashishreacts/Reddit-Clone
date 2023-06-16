@@ -290,7 +290,7 @@ export const Card = () => {
         {/* 1 */}
         {data.map((value) => {
           return (
-            <div className="card">
+            <div className="card" key={value.id}>
               <div className="card-body">
                 {/* icon */}
                 <span className="icons">
