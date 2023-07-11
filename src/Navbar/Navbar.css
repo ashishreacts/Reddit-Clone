@@ -1,5 +1,7 @@
 .navbar {
   background-color: #f8f9fa;
+  width: 100vw;
+  height: 90px;
 }
 
 .navbar-brand img {
@@ -7,100 +9,26 @@
   width: auto;
 }
 
-.form-control {
+.nav-form-control {
+  margin: 15px 135px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
   width: 450px;
-  margin: 0px 300px;
-  border-radius: 20px;
+  height: 35px;
+  font-size: 14px;
 }
 
 .btn-outline-success {
-  margin: 0px 50px;
+  margin: 15px 70px;
   border: none;
-  border-radius: 20px;
-}
-
-#userInfo {
-  display: flex;
-  align-items: center;
-}
-
-#username {
-  margin-right: 10px;
-}
-
-.logout {
-  background-color: orangered;
-  border: none;
-  cursor: pointer;
-  border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 100px;
-  height: 40px;
-  margin-right: 250px;
+  height: 35px;
 }
 
-.logout:hover {
-  text-decoration: underline;
-  background-color: rgb(241, 133, 94);
-}
-
-.modal-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
-}
-
-.modal-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  z-index: 101;
-}
-
-.modal-h2 {
-  margin: 0 0 10px;
-}
-
-.modal-p {
-  margin-bottom: 20px;
-}
-
-.modal-text {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.modal-btn {
-  display: block;
-  width: 50%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.modal-btn:hover {
-  background-color: #0069d9;
-}
-
-.btn-primary {
-  background-color: orangered;
-  border: none;
-  cursor: pointer;
-  border: none;
-  border-radius: 20px;
-  width: 100px;
-  height: 40px;
-  margin-right: 300px;
+.nav_username {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 15px -20px;
 }

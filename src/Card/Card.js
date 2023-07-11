@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import "./Card.css";
 import axios from "axios";
+
 export const Card = () => {
   const [data, setData] = useState([]);
   const [count, setCount] = useState(0);
+  const [like, setLike] = useState(false);
+  const [likeCount, setLikeCount] = useState(0);
+
+  const handleLikes = (id) => {
+    const updatedData = data.map((article) => {
+      if (article.id === id) {
+        article.likes++;
+      }
+      return article;
+    });
+    setData(updatedData);
+  };
 
   const formatCount = (count) => {
     return count.toLocaleString("en-US", {
@@ -36,7 +49,13 @@ export const Card = () => {
         "https://gnews.io/api/v4/search?q=example&lang=en&country=in&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
       )
       .then((response) => {
-        setData(response.data.articles);
+        const data = response.data.articles.map((article) => {
+          article.id = Date.now();
+          article.likes = 0;
+          return article;
+        });
+        setData(data);
+        console.log(data);
       });
   };
   const getTopNews = () => {
@@ -283,6 +302,18 @@ export const Card = () => {
                   </i>
                 </button>
               </li>
+              <li>
+                <button
+                  type="button"
+                  className="card-btn-post"
+                  // onClick={handleOpenModal}
+                >
+                  <i className="bi-file-earmark-plus">
+                    <span>New Post</span>
+                  </i>
+                </button>
+                {/* {isModalOpen && <MyModal closeModal={handleCloseModal} />} */}
+              </li>
             </ul>
           </div>
         </div>
@@ -305,7 +336,12 @@ export const Card = () => {
                   </div>
                 </span>
                 {/*  */}
-                <img src={value.image} className="card-img" alt="..." />
+                <img
+                  src={value.image}
+                  className="card-img"
+                  alt="card-img"
+                  onDoubleClick={handleLikes}
+                />
                 <div className="card-body">
                   <h4 className="card-title">{value.title}</h4>
                   <p className="card-text">{value.description}</p>
@@ -316,6 +352,37 @@ export const Card = () => {
                   >
                     See News
                   </a>
+                </div>
+                <div className="card-footer">
+                  {like ? (
+                    <i
+                      className="bi-hand-thumbs-up text-bg-danger"
+                      onClick={() => {
+                        handleLikes(value.id);
+                      }}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <span>{value.likes} </span>
+                    </i>
+                  ) : (
+                    <i
+                      className="bi-hand-thumbs-up "
+                      onClick={() => {
+                        handleLikes(value.id);
+                      }}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <span> {value.likes} </span>
+                    </i>
+                  )}
+                  &nbsp;&nbsp;
+                  <i className="bi-chat-left-dots ">
+                    <span> Comment </span>
+                  </i>
+                  &nbsp;&nbsp;
+                  <i className="bi-share">
+                    <span> Share </span>
+                  </i>
                 </div>
               </div>
             </div>

@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import MyModal from "./ShowModal";
 
-const Navbar = ({ setResults }) => {
-  const [showModal, setShowModal] = useState(false);
-  const closeModal = () => setShowModal(false);
-  const [user, setUser] = useState(null);
-
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router";
+import { useUserAuth } from "../component/Context/UserAuthContext";
+import Sidebar from "../component/SidebarComponent/Sidebar";
+const Navbar = () => {
+  const { logOut, user } = useUserAuth();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -32,7 +41,7 @@ const Navbar = ({ setResults }) => {
 
             <form className="d-flex" role="search">
               <input
-                className="form-control me-2"
+                className="nav-form-control me-2"
                 type="search"
                 placeholder="Search Reddit"
                 aria-label="Search"
@@ -43,31 +52,25 @@ const Navbar = ({ setResults }) => {
                 </i>
               </button>
             </form>
-            {/* MODAL */}
-            {user == null ? (
-              <button
-                type="buttton"
-                className="btn btn-primary"
-                onClick={() => setShowModal(true)}
+
+            <div className="nav_username p-4 box mt-3 text-center">
+              {user && user.email}
+            </div>
+            <div className="d-grid gap-2">
+              <Button
+                variant="primary"
+                onClick={handleLogout}
+                style={{ margin: "0px 15px" }}
               >
-                Log In
-              </button>
-            ) : (
-              <div id="userInfo">
-                <div id="username">{user}</div>
-                <button
-                  type="buttton"
-                  className="logout"
-                  onClick={() => setUser(null)}
-                >
-                  Log Out
-                </button>
-              </div>
-            )}
-            {showModal && <MyModal setUser={setUser} closeModal={closeModal} />}
+                Log out
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
+
+      {/*  */}
+      <Sidebar />
     </>
   );
 };
