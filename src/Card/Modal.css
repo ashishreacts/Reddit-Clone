@@ -1,0 +1,48 @@
+.modal_browImg {
+  max-width: 400px;
+  height: 150px;
+  margin: 5px 130px;
+}
+.modal_h4 {
+  margin: 5px 15px;
+}
+.modal_p {
+  margin: 5px 15px;
+  font-size: 21px;
+  font-weight: 500;
+}
+.modal_form_control {
+  width: 400px;
+  margin: 5px 15px;
+  border-radius: 5px;
+  border: 0.5px solid lightgrey;
+  outline: none;
+}
+
+.modal_card {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 530px;
+  height: auto;
+  margin: 40px 0px;
+}
+
+/* .modal_card-img-top {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 15px 60px;
+  width: 80%;
+  height: 280px;
+}
+.modal_card-title {
+  margin-left: 180px;
+}
+.modal_card-text {
+  text-align: justify;
+  text-transform: none;
+  margin: 10px 60px;
+}*/
+.modal_card_body {
+  margin: 60px -385px;
+}

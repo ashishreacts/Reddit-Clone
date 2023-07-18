@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import "./Card.css";
 import axios from "axios";
+import Modal from "./Modal";
 
 export const Card = () => {
   const [data, setData] = useState([]);
-  const [count, setCount] = useState(0);
   const [like, setLike] = useState(false);
-  const [likeCount, setLikeCount] = useState(0);
-
+  const [comment, setComment] = useState("");
+  const [showCommentInput, setShowCommentInput] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [formData, setFormData] = useState(null);
+  const [formEntries, setFormEntries] = useState([]);
   const handleLikes = (id) => {
     const updatedData = data.map((article) => {
       if (article.id === id) {
@@ -25,48 +28,85 @@ export const Card = () => {
     });
   };
 
-  const increment = () => {
-    setCount(count + 1);
+  const increment = (id) => {
+    const updatedData = data.map((article) => {
+      if (article.id === id) {
+        article.count++;
+      }
+      return article;
+    });
+    setData(updatedData);
   };
 
-  const decrement = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    }
+  const decrement = (id) => {
+    const updatedData = data.map((article) => {
+      if (article.id === id && article.count > 0) {
+        article.count--;
+      }
+      return article;
+    });
+    setData(updatedData);
   };
-  const getHotNews = () => {
-    axios
-      .get(
-        "https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
-      )
-      .then((response) => {
-        setData(response.data.articles);
+
+  // const getData = (url) => {
+  //   axios.get(url).then((response) => {
+  //     const data = response.data.articles.map((article, index) => {
+  //       article.id = Date.now() + index;
+  //       article.likes = 0;
+  //       return article;
+  //     });
+  //     setData(data);
+  //   });
+  // };
+
+  const getData = (url) => {
+    axios.get(url).then((response) => {
+      const data = response.data.articles.map((article, index) => {
+        article.id = Date.now() + index;
+        article.likes = 0;
+        article.count = 0; // Add a count property
+        article.comments = [];
+        return article;
       });
+      setData(data);
+    });
   };
-  const getNewNews = () => {
-    axios
-      .get(
-        "https://gnews.io/api/v4/search?q=example&lang=en&country=in&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
-      )
-      .then((response) => {
-        const data = response.data.articles.map((article) => {
-          article.id = Date.now();
-          article.likes = 0;
-          return article;
-        });
-        setData(data);
-        console.log(data);
-      });
+  const addComment = (id) => {
+    const commentObj = {
+      id: Date.now(),
+      text: comment,
+    };
+    const updatedData = data.map((article) => {
+      if (article.id === id) {
+        article.comments.push(commentObj);
+      }
+      return article;
+    });
+    setData(updatedData);
+    setComment("");
+    setShowCommentInput(true);
   };
-  const getTopNews = () => {
-    axios
-      .get(
-        "https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=in&apikey=80ad10984b50944aaf52a052eb31ae04"
-      )
-      .then((response) => {
-        setData(response.data.articles);
-      });
+
+  const toggleCommentInput = () => {
+    setShowCommentInput(!showCommentInput);
   };
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    document.body.style.overflow = "initial";
+  };
+
+  const handleFormSubmit = (data) => {
+    setFormData(data);
+    setFormEntries((prevEntries) => [...prevEntries, data]);
+    handleCloseModal();
+  };
+
   return (
     <>
       <div className="card-main">
@@ -79,17 +119,21 @@ export const Card = () => {
                 <button
                   type="button"
                   className="card-btn-post"
-                  onClick={getHotNews}
+                  onClick={() => {
+                    getData(
+                      "https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
+                    );
+                  }}
                 >
                   <i className="bi-fire">
-                    <span>Hot</span>
+                    <span className="popular_post_card">Hot</span>
                   </i>
                 </button>
               </li>
               <li>
                 <div className="dropdown">
                   <button
-                    className="card-btn-post dropdown-toggle"
+                    className="popular_post_card card-btn-post dropdown-toggle"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -284,10 +328,14 @@ export const Card = () => {
                 <button
                   type="button"
                   className="card-btn-post"
-                  onClick={getNewNews}
+                  onClick={() => {
+                    getData(
+                      "https://gnews.io/api/v4/search?q=example&lang=en&country=in&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
+                    );
+                  }}
                 >
                   <i className="bi-plus-circle-dotted">
-                    <span>New</span>
+                    <span className="popular_post_card">New</span>
                   </i>
                 </button>
               </li>
@@ -295,24 +343,35 @@ export const Card = () => {
                 <button
                   type="button"
                   className="card-btn-post"
-                  onClick={getTopNews}
+                  onClick={() => {
+                    getData(
+                      "https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=in&apikey=80ad10984b50944aaf52a052eb31ae04"
+                    );
+                  }}
                 >
                   <i className="bi-bar-chart">
-                    <span>Top</span>
+                    <span className="popular_post_card">Top</span>
                   </i>
                 </button>
               </li>
               <li>
                 <button
                   type="button"
-                  className="card-btn-post"
-                  // onClick={handleOpenModal}
+                  className=" card-btn-post"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                  onClick={handleOpenModal}
                 >
                   <i className="bi-file-earmark-plus">
-                    <span>New Post</span>
+                    <span className="popular_post_card">New Post</span>
                   </i>
                 </button>
-                {/* {isModalOpen && <MyModal closeModal={handleCloseModal} />} */}
+                {showModal && (
+                  <Modal
+                    handleCloseModal={handleCloseModal}
+                    handleFormSubmit={handleFormSubmit}
+                  />
+                )}
               </li>
             </ul>
           </div>
@@ -326,21 +385,30 @@ export const Card = () => {
                 {/* icon */}
                 <span className="icons">
                   <div className="upword">
-                    <i className="bi-arrow-up-circle" onClick={increment}></i>
+                    <i
+                      className="bi-arrow-up-circle"
+                      onClick={() => increment(value.id)}
+                    ></i>
                   </div>
 
-                  <span>{formatCount(count)}</span>
+                  <span>{formatCount(value.count)}</span>
 
                   <div className="downword">
-                    <i className="bi-arrow-down-circle" onClick={decrement}></i>
+                    <i
+                      className="bi-arrow-down-circle"
+                      onClick={() => decrement(value.id)}
+                    ></i>
                   </div>
                 </span>
-                {/*  */}
+
+                {/*  3*/}
                 <img
                   src={value.image}
                   className="card-img"
                   alt="card-img"
-                  onDoubleClick={handleLikes}
+                  onDoubleClick={() => {
+                    handleLikes(value.id);
+                  }}
                 />
                 <div className="card-body">
                   <h4 className="card-title">{value.title}</h4>
@@ -353,10 +421,11 @@ export const Card = () => {
                     See News
                   </a>
                 </div>
+
                 <div className="card-footer">
                   {like ? (
                     <i
-                      className="bi-hand-thumbs-up text-bg-danger"
+                      className="bi-hand-thumbs-up"
                       onClick={() => {
                         handleLikes(value.id);
                       }}
@@ -376,19 +445,65 @@ export const Card = () => {
                     </i>
                   )}
                   &nbsp;&nbsp;
-                  <i className="bi-chat-left-dots ">
+                  <i
+                    className="bi-chat-left-dots"
+                    onClick={toggleCommentInput}
+                    style={{ cursor: "pointer" }}
+                  >
                     <span> Comment </span>
                   </i>
-                  &nbsp;&nbsp;
-                  <i className="bi-share">
-                    <span> Share </span>
-                  </i>
+                  <div className="comments-list">
+                    {value.comments.map((comment) => (
+                      <div key={comment.id} className="comment">
+                        {comment.text}
+                      </div>
+                    ))}
+                  </div>
+                  {/* Comment input */}
+                  {showCommentInput && (
+                    <div className="comment-input">
+                      <input
+                        type="text"
+                        className="comments_input"
+                        placeholder="&nbsp; Add a comment..."
+                        value={comment}
+                        onChange={(e) => setComment(e.target.value)}
+                      />
+                      <button
+                        className="comment_btn"
+                        onClick={() => addComment(value.id)}
+                      >
+                        Add
+                      </button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           );
         })}
       </div>
+      {formEntries.length > 0 && (
+        <div>
+          {/*  */}
+          {formEntries.map((entry, index) => (
+            <div className="card" style={{ width: "600px" }} key={index}>
+              <div className="card-body">
+                {entry.image && (
+                  <img
+                    src={URL.createObjectURL(entry.image)}
+                    className="card-img"
+                    alt="Uploaded"
+                  />
+                )}
+                <h5 className="card-title">{entry.heading}</h5>
+                <p className="card-text">{entry.description}</p>
+              </div>
+            </div>
+          ))}
+          {/*  */}
+        </div>
+      )}
     </>
   );
 };
