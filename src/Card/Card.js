@@ -9,7 +9,7 @@ export const Card = () => {
   const [comment, setComment] = useState("");
   const [showCommentInput, setShowCommentInput] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [formData, setFormData] = useState(null);
+  // const [formData, setFormData] = useState(null);
   const [formEntries, setFormEntries] = useState([]);
   const handleLikes = (id) => {
     const updatedData = data.map((article) => {
@@ -21,6 +21,9 @@ export const Card = () => {
     setData(updatedData);
   };
 
+  const toggleLike = () => {
+    setLike((prevLike) => !prevLike);
+  };
   const formatCount = (count) => {
     return count.toLocaleString("en-US", {
       minimumIntegerDigits: 2,
@@ -102,7 +105,7 @@ export const Card = () => {
   };
 
   const handleFormSubmit = (data) => {
-    setFormData(data);
+    // setFormData(data);
     setFormEntries((prevEntries) => [...prevEntries, data]);
     handleCloseModal();
   };
@@ -436,9 +439,10 @@ export const Card = () => {
                   ) : (
                     <i
                       className="bi-hand-thumbs-up "
-                      onClick={() => {
-                        handleLikes(value.id);
-                      }}
+                      // onClick={() => {
+                      //   handleLikes(value.id);
+                      // }}
+                      onClick={toggleLike}
                       style={{ cursor: "pointer" }}
                     >
                       <span> {value.likes} </span>
