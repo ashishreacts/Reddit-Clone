@@ -1,7 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.modal-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(128, 128, 128, 0.9);
+  z-index: 99;
+}
+.modal_box {
+  max-width: 500px;
+}
+.modal-container {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 32px 48px;
+  border-radius: 10px;
+  background-color: white;
+  z-index: 100;
+}
+
 .modal_browImg {
-  max-width: 400px;
-  height: 150px;
-  margin: 5px 130px;
+  height: 50px;
+  margin: 5px 15px;
+  font-size: revert;
+}
+.modal-h2 {
+  margin: 5px 100px;
 }
 .modal_h4 {
   margin: 5px 15px;
@@ -17,32 +48,19 @@
   border-radius: 5px;
   border: 0.5px solid lightgrey;
   outline: none;
+  border-radius: 10px;
+}
+.modal_form_control_heading {
+  width: 400px;
+  height: 40px;
+  margin: 5px 15px;
+  border-radius: 5px;
+  border: 0.5px solid lightgrey;
+  outline: none;
+  border-radius: 10px;
 }
 
-.modal_card {
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 530px;
-  height: auto;
-  margin: 40px 0px;
-}
-
-/* .modal_card-img-top {
-  display: flex;
-  justify-content: center;
-  border-radius: 10px;
-  margin: 15px 60px;
-  width: 80%;
-  height: 280px;
-}
-.modal_card-title {
-  margin-left: 180px;
-}
-.modal_card-text {
-  text-align: justify;
-  text-transform: none;
-  margin: 10px 60px;
-}*/
-.modal_card_body {
-  margin: 60px -385px;
+.modal_btn {
+  margin: 5px 15px;
+  width: 90px;
 }

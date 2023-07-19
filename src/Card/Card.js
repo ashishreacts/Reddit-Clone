@@ -361,8 +361,8 @@ export const Card = () => {
                 <button
                   type="button"
                   className=" card-btn-post"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
+                  // data-bs-toggle="modal"
+                  // data-bs-target="#staticBackdrop"
                   onClick={handleOpenModal}
                 >
                   <i className="bi-file-earmark-plus">
