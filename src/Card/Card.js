@@ -51,23 +51,12 @@ export const Card = () => {
     setData(updatedData);
   };
 
-  // const getData = (url) => {
-  //   axios.get(url).then((response) => {
-  //     const data = response.data.articles.map((article, index) => {
-  //       article.id = Date.now() + index;
-  //       article.likes = 0;
-  //       return article;
-  //     });
-  //     setData(data);
-  //   });
-  // };
-
   const getData = (url) => {
     axios.get(url).then((response) => {
       const data = response.data.articles.map((article, index) => {
         article.id = Date.now() + index;
         article.likes = 0;
-        article.count = 0; // Add a count property
+        article.count = 0;
         article.comments = [];
         return article;
       });
@@ -361,8 +350,6 @@ export const Card = () => {
                 <button
                   type="button"
                   className=" card-btn-post"
-                  // data-bs-toggle="modal"
-                  // data-bs-target="#staticBackdrop"
                   onClick={handleOpenModal}
                 >
                   <i className="bi-file-earmark-plus">
