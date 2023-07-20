@@ -1,7 +1,10 @@
 .signup_container {
   border: 1px solid black;
   border-radius: 10px;
-  margin: 140px 450px;
+  margin: 120px 550px;
   width: 400px;
   height: auto;
+}
+.signup_heading {
+  margin: 10px 80px;
 }
