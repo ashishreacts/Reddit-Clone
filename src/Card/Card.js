@@ -9,7 +9,6 @@ export const Card = () => {
   const [comment, setComment] = useState("");
   const [showCommentInput, setShowCommentInput] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  // const [formData, setFormData] = useState(null);
   const [formEntries, setFormEntries] = useState([]);
   const handleLikes = (id) => {
     const updatedData = data.map((article) => {
