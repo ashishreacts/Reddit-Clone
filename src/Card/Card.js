@@ -93,7 +93,6 @@ export const Card = () => {
   };
 
   const handleFormSubmit = (data) => {
-    // setFormData(data);
     setFormEntries((prevEntries) => [...prevEntries, data]);
     handleCloseModal();
   };
@@ -366,12 +365,10 @@ export const Card = () => {
           </div>
         </div>
 
-        {/* 1 */}
         {data.map((value) => {
           return (
             <div className="card" key={value.id}>
               <div className="card-body">
-                {/* icon */}
                 <span className="icons">
                   <div className="upword">
                     <i
@@ -390,7 +387,6 @@ export const Card = () => {
                   </div>
                 </span>
 
-                {/*  3*/}
                 <img
                   src={value.image}
                   className="card-img"
@@ -425,9 +421,6 @@ export const Card = () => {
                   ) : (
                     <i
                       className="bi-hand-thumbs-up "
-                      // onClick={() => {
-                      //   handleLikes(value.id);
-                      // }}
                       onClick={toggleLike}
                       style={{ cursor: "pointer" }}
                     >
@@ -449,7 +442,6 @@ export const Card = () => {
                       </div>
                     ))}
                   </div>
-                  {/* Comment input */}
                   {showCommentInput && (
                     <div className="comment-input">
                       <input
@@ -475,7 +467,6 @@ export const Card = () => {
       </div>
       {formEntries.length > 0 && (
         <div>
-          {/*  */}
           {formEntries.map((entry, index) => (
             <div className="card" style={{ width: "600px" }} key={index}>
               <div className="card-body">
@@ -491,7 +482,6 @@ export const Card = () => {
               </div>
             </div>
           ))}
-          {/*  */}
         </div>
       )}
     </>
