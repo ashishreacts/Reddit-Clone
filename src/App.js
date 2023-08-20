@@ -12,7 +12,6 @@ const App = () => {
     <Container
       style={{
         width: "100vw",
-
         margin: "0px",
         padding: "0px",
       }}

@@ -23,8 +23,11 @@
   margin: 15px 70px;
   border: none;
   border-radius: 10px;
-  width: 100px;
+  width: 120px;
   height: 35px;
+}
+.btn-outline-success a {
+  margin: 0px 5px;
 }
 
 .nav_username {

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Card.css";
 import axios from "axios";
 import Modal from "./Modal";
+import DataSlider from "./DataSlider";
+import DummyCard from "./DummyCard";
 
 export const Card = () => {
   const [data, setData] = useState([]);
@@ -100,6 +102,7 @@ export const Card = () => {
   return (
     <>
       <div className="card-main">
+        <DataSlider />
         {/* Popular posts */}
         <h4 className="post-title">Popular Post</h4>
         <div className="card-popular-post">
@@ -465,6 +468,7 @@ export const Card = () => {
           );
         })}
       </div>
+      <DummyCard />
       {formEntries.length > 0 && (
         <div>
           {formEntries.map((entry, index) => (

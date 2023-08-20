@@ -48,7 +48,11 @@ const Navbar = () => {
               />
               <button className="btn btn-outline-success" type="submit">
                 <i className="bi-qr-code-scan">
-                  <span className="get">Get App</span>{" "}
+                  <span className="get">
+                    <a href="https://play.google.com/store/apps/details?id=com.reddit.frontpage&hl=en&gl=US&pli=1">
+                      Get App
+                    </a>
+                  </span>
                 </i>
               </button>
             </form>
