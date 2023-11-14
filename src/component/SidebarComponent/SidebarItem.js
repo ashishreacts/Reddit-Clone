@@ -27,10 +27,17 @@ export const SidebarItem = ({ item }) => {
     );
   } else {
     return (
-      <a href={item.path || "#"} className="sidebar-item plain">
+      // <a href={item.path || "#"} className="sidebar-item plain">
+      //   {item.icon && <i className={item.icon}></i>}
+      //   {item.title}
+      // </a>
+      <button
+        onClick={() => (window.location.href = item.path || "#")}
+        className="sidebar-item plain"
+      >
         {item.icon && <i className={item.icon}></i>}
         {item.title}
-      </a>
+      </button>
     );
   }
 };

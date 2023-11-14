@@ -1,9 +1,9 @@
+import axios from "axios";
 import React, { useState } from "react";
 import "./Card.css";
-import axios from "axios";
-import Modal from "./Modal";
 import DataSlider from "./DataSlider";
 import DummyCard from "./DummyCard";
+import Modal from "./Modal";
 
 export const Card = () => {
   const [data, setData] = useState([]);
@@ -114,7 +114,7 @@ export const Card = () => {
                   className="card-btn-post"
                   onClick={() => {
                     getData(
-                      "https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
+                      "https://gnews.io/api/v4/search?q=hot news&lang=en&country=us&max=10&apikey=8696f4bed5e7aff4f19b7eb363acd0d3"
                     );
                   }}
                 >
@@ -323,7 +323,7 @@ export const Card = () => {
                   className="card-btn-post"
                   onClick={() => {
                     getData(
-                      "https://gnews.io/api/v4/search?q=example&lang=en&country=in&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
+                      "https://gnews.io/api/v4/search?q=new&lang=en&country=in&max=10&apikey=8696f4bed5e7aff4f19b7eb363acd0d3"
                     );
                   }}
                 >
@@ -338,7 +338,7 @@ export const Card = () => {
                   className="card-btn-post"
                   onClick={() => {
                     getData(
-                      "https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=in&apikey=80ad10984b50944aaf52a052eb31ae04"
+                      "https://gnews.io/api/v4/top-headlines?category=top news&lang=en&country=in&apikey=8696f4bed5e7aff4f19b7eb363acd0d3"
                     );
                   }}
                 >
@@ -472,7 +472,7 @@ export const Card = () => {
       {formEntries.length > 0 && (
         <div>
           {formEntries.map((entry, index) => (
-            <div className="card" style={{ width: "600px" }} key={index}>
+            <div className="card" style={{ width: "850px" }} key={index}>
               <div className="card-body">
                 {entry.image && (
                   <img

@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../component/Context/UserAuthContext";
 import Sidebar from "../component/SidebarComponent/Sidebar";
+import Card from "../Card/Card";
 const Navbar = () => {
   const { logOut, user } = useUserAuth();
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Navbar = () => {
     }
   };
   return (
-    <>
+    <div className="navbar-layout">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <button
@@ -74,8 +75,14 @@ const Navbar = () => {
       </nav>
 
       {/*  */}
-      <Sidebar />
-    </>
+      <div className="content-layout">
+        <Sidebar />
+
+        <div className="card-component" >
+          <Card />
+        </div>
+      </div>
+    </div>
   );
 };
 

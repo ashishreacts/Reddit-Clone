@@ -2,6 +2,7 @@
   background-color: #f8f9fa;
   width: 100vw;
   height: 90px;
+  overflow: hidden;
 }
 
 .navbar-brand img {
@@ -34,4 +35,20 @@
   font-size: 13px;
   font-weight: 500;
   margin: 15px -20px;
+}
+
+
+/*  */
+
+.content-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.card-component {
+  flex: 1;
+  overflow-y: hidden;
+
+  padding: 10px;
 }

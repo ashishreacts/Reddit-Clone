@@ -12,7 +12,7 @@ function NewsCards(props) {
   const getNews = () => {
     axios
       .get(
-        "https://gnews.io/api/v4/search?q=example&apikey=80ad10984b50944aaf52a052eb31ae04"
+        "https://gnews.io/api/v4/search?q=manoj jarange&apikey=8696f4bed5e7aff4f19b7eb363acd0d3"
       )
       .then((response) => {
         setData(response.data.articles);

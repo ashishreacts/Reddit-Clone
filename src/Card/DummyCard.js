@@ -12,7 +12,7 @@ function DummyCard() {
   const getNewNews = () => {
     axios
       .get(
-        "https://gnews.io/api/v4/search?q=example&lang=en&country=pk&max=10&apikey=80ad10984b50944aaf52a052eb31ae04"
+        "https://gnews.io/api/v4/search?q=cricket&lang=en&country=pk&max=10&apikey=8696f4bed5e7aff4f19b7eb363acd0d3"
       )
       .then((response) => {
         if (response.data && response.data.articles) {

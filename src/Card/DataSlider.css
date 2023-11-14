@@ -2,11 +2,12 @@
   position: relative;
   overflow: hidden;
   padding: 10px;
+  width: 70%;
 }
 .news_container {
+  overflow: hidden;
   padding: 0 10px;
   display: flex;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 .pre_btn,
@@ -23,7 +24,6 @@
 }
 .post_btn {
   right: 0;
-  margin-right: 250px;
 }
 .pre_btn p,
 .post_btn p {

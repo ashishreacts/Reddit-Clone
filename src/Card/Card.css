@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 200px;
+  margin-left: 150px;
   height: auto;
   padding-top: 15px;
 }
@@ -47,7 +47,8 @@
   border: 1px solid rgb(212, 209, 209);
   border-radius: 8px;
   margin: 5px;
-  margin-left: 200px;
+  margin-left: 150px;
+ 
 }
 .card-popular-post-body {
   margin: 10px;
@@ -78,7 +79,8 @@ i {
 }
 .post-title {
   margin: 10px;
-  margin-left: 200px;
+  margin-left: 150px;
+  
 }
 
 .icons {

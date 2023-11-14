@@ -108,10 +108,6 @@
         "path": "/Pfizer"
       },
       {
-        "title": "Johnson & Johnson",
-        "path": "/Johnson & Johnson"
-      },
-      {
         "title": "AstraZeneca",
         "path": "/AstraZeneca"
       },
@@ -144,10 +140,6 @@
       {
         "title": "Cardano",
         "path": "/Cardano"
-      },
-      {
-        "title": "Dogecoin",
-        "path": "/Dogecoin"
       },
       {
         "title": "Dogecoin",

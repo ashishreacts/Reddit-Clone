@@ -69,7 +69,6 @@ function Modal({ handleCloseModal, handleFormSubmit }) {
           <button
             type="button"
             className="modal_btn btn btn-secondary"
-            // data-bs-dismiss="modal"
             onClick={handleCloseModal}
           >
             Close

@@ -1,0 +1,33 @@
+.game-container {
+  display: flex;
+}
+
+.game-card-container {
+  flex: 1; 
+  padding: 20px; 
+}
+.game-card {
+  width: 850px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0px 0 10px 200px;
+}
+
+.game-card-img-top {
+  width: 650px;
+  height: 250px;
+  margin: 15px 80px;
+  border-radius: 8px;
+}
+
+.game-card-title {
+  font-size: 22px;
+  margin: 5px 70px;
+}
+
+.game-card-text {
+  font-size: 18px;
+  text-align: justify;
+  margin: 5px 30px;
+}
