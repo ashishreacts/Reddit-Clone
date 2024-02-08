@@ -1,6 +1,6 @@
 .navbar {
   background-color: #f8f9fa;
-  width: 100vw;
+  width: 94.9rem;
   height: 90px;
   overflow: hidden;
 }
@@ -34,9 +34,8 @@
 .nav_username {
   font-size: 13px;
   font-weight: 500;
-  margin: 15px -20px;
+  margin: 15px 6rem;
 }
-
 
 /*  */
 
@@ -44,11 +43,10 @@
   display: flex;
   flex: 1;
   overflow: hidden;
+  width: 94.9rem;
 }
 
 .card-component {
   flex: 1;
   overflow-y: hidden;
-
-  padding: 10px;
 }

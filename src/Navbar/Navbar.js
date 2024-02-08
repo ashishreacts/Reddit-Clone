@@ -61,11 +61,13 @@ const Navbar = () => {
             <div className="nav_username p-4 box mt-3 text-center">
               {user && user.email}
             </div>
-            <div className="d-grid gap-2">
+            <div
+              className="d-grid gap-2"
+              style={{ width: "7rem"}}
+            >
               <Button
                 variant="primary"
                 onClick={handleLogout}
-                style={{ margin: "0px 15px" }}
               >
                 Log out
               </Button>
@@ -78,7 +80,7 @@ const Navbar = () => {
       <div className="content-layout">
         <Sidebar />
 
-        <div className="card-component" >
+        <div className="card-component">
           <Card />
         </div>
       </div>
